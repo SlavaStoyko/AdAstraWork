@@ -1,3 +1,19 @@
+@font-face {
+
+  font-family: "Source Sans Pro";
+
+  src: local("Source Sans Pro"),
+
+    url("../font/static/SourceSans3-Black.ttf") format("truetype"),
+    url("../font/static/SourceSans3-Bold.ttf") format("truetype"),
+    url("../font/static/SourceSans3-ExtraBold.ttf") format("truetype"),
+    url("../font/static/SourceSans3-ExtraLight.ttf") format("truetype"),
+    url("../font/static/SourceSans3-Light.ttf") format("truetype"),
+    url("../font/static/SourceSans3-Medium.ttf") format("truetype"),
+    url("../font/static/SourceSans3-Regular.ttf") format("truetype"),
+    url("../font/static/SourceSans3-SemiBold.ttf") format("truetype");
+
+}
 @media (max-width:1296px){
   .container{
     max-width: 964px !important;
@@ -196,13 +212,14 @@ top: 0;
   padding: 0;
 }
 body{
-  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  font-family: sans-serif !important;
   box-sizing: border-box;
 margin: 0;
 padding: 0;
 color: #212335;
 
 }
+
 ul{
   padding: 0;
 }
@@ -210,17 +227,27 @@ ul li{
   list-style-type: none ;
 }
 a{
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif !important;
   text-decoration: none;
   color: inherit;
 }
 button{
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif !important;
   border: none;
   background-color: inherit;
+  color: inherit;
+  font-size: 16px;
+}
+button :hover{
+  cursor: pointer;
+
+
 }
 .container{
   max-width: 1276px; margin: 0 auto; padding: 0 10px;
 }
 .header{
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   position: fixed;
   left: 0;
   right: 0;
@@ -232,7 +259,7 @@ button{
   transition: transform 0.3s ease;
 }
 .main{
-  margin: 156px 0px 0px 0px;
+  margin: 170px 0px 0px 0px;
 }
 
 .shildMonitor{
@@ -412,6 +439,16 @@ div.mobileSubTerdMenu{
   transform: translateX(-100%);
   transition: transform 0.5s ease-in;
 }
+.burger_btn_dropeDown span::before{
+  display: block;
+  content: " ";
+  background-image: url("../images/arrowF.svg");
+ width: 15px;
+ height: 15px;
+  position: absolute;
+  right: 30px;
+    transform: translateY(-15px);
+}
 .subList {
   margin-top: 100px;
 }
@@ -433,9 +470,7 @@ div.mobileSubTerdMenu{
   display: inline-flex;
   gap: 15px;
 }
-.Text{
-  
-}
+
 .mobileSideMenu_List{
   display: flex;
   flex-direction: column;
@@ -443,9 +478,7 @@ div.mobileSubTerdMenu{
   gap: 25px;
  
 }
-/* .socialLink-mobile{
-display: none;
-} */
+
 /* ==================================== event on JS ======================================== */
 .mobileMenu.onActive,.shildMonitor.onActive,.SearchonSite.onActive,.topMenu.onActive,div.monitor.onActive,.infoText.onActive,.infoText.weatherCity.onActive{
   display: block;
@@ -461,13 +494,9 @@ display: none;
 }
 
 .topMenu.onActive{
-  transform: translateY(-190%);
+  transform: translateY(-204%);
  
 }
-/* .header.onActive{
-  transform: translateY(80px);
-  
-} */
 /* ----------------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------- */
 .mainMenu{
@@ -659,6 +688,7 @@ input:focus{
 
 
 footer{
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   color: #fff;
 }
 footer h3{

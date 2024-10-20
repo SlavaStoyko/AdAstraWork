@@ -136,21 +136,20 @@ menuOpenbtn.addEventListener("click",(e)=>{
                 btnOpenSubMenu[1].classList.remove("onActive");
                 btnOpenSubMenu[2].classList.remove("onActive");
         
-            document.querySelector('.mobileSideMenu_List').children[2].onclick = () =>{
+            document.querySelector('.mobileSideMenu_List').children[2].addEventListener("mouseover",() =>{
                 btnOpenSubMenu[0].classList.add("onActive");
                 btnOpenSubMenu[1].classList.remove("onActive");
                 btnOpenSubMenu[2].classList.remove("onActive");
-            }
-            document.querySelector('.mobileSideMenu_List').children[4].onclick = () =>{
-                btnOpenSubMenu[1].classList.add("onActive");
+            })
+            document.querySelector('.mobileSideMenu_List').children[4].addEventListener("mouseover",() =>{
                 btnOpenSubMenu[0].classList.remove("onActive");
                 btnOpenSubMenu[2].classList.remove("onActive");
-            }
-            document.querySelector('.mobileSideMenu_List').children[5].onclick = () =>{
+            })
+            document.querySelector('.mobileSideMenu_List').children[5].addEventListener("mouseover",() =>{
                 btnOpenSubMenu[2].classList.add("onActive");
                 btnOpenSubMenu[0].classList.remove("onActive");
                 btnOpenSubMenu[1].classList.remove("onActive");
-            }
+            })
             checkScroll();
       }
     
@@ -174,10 +173,10 @@ menuOpenbtn.addEventListener("click",(e)=>{
 function checkScroll() {
     
 if(bodyClosebtn[0].classList.contains("onActive")){
-    document.body.style.overflowY = "hidden";
+    document.body.style.overflow = "hidden";
     document.body.style.paddingRight = "15px";
 } else{
-    document.body.style.overflowY = "scroll";
+    document.body.style.overflow = "scroll";
     document.body.style.paddingRight = "0px";
 
 }
