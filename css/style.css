@@ -1,0 +1,802 @@
+@media (max-width:1296px){
+  .container{
+    max-width: 964px !important;
+  }
+  div.mainMenu_block {
+    font-size: 14px !important;
+  }
+  .infoTgr button{
+    font-size: 14px !important;
+  
+  }
+  .mainMenu_block{
+    gap: 10px !important;
+  }
+  .menu{
+    gap: 30px !important;
+  }
+  .bottomMenu_block-First{
+    gap: 30px !important;
+  } 
+  .bottomMenu_list{
+    gap: 15px !important;
+  }
+  .infoText{
+    width: 548px !important;
+    height: 460px !important;
+  }
+  .infoText_subList{
+    column-count: 2 !important;
+  }
+  .infoText.weatherCity{
+    width: 240px !important;
+    height:80px !important;
+  }
+}
+
+@media (min-width:1024px){
+  .item1{
+    width: 47%;
+    order: 1;
+    }
+    .item2{
+    width: 30%;
+    order: 2;
+    }
+    .item3{
+    width: 16%;
+    order: 3;
+    }
+    .item4{
+    width: 100%;
+    order: 4;
+    }
+  .H1_item{
+-webkit-column-count: 3; /* Safari and Chrome */
+ -moz-column-count: 3; /* Firefox */
+ column-count: 3; /* CSS3 */
+  }
+  .H2_item{
+    column-gap: 40px;
+  }
+  
+  .H3_item{
+  
+-webkit-column-count: 4; /* Safari and Chrome */
+ -moz-column-count: 4; /* Firefox */
+ column-count: 4; /* CSS3 */
+  }
+
+  .H4_item{
+-webkit-column-count: 6; /* Safari and Chrome */
+ -moz-column-count: 6; /* Firefox */
+ column-count: 6; /* CSS3 */
+
+}
+.bottomFooterGrid{
+
+ grid-template-columns: 50px 1fr;
+ grid-template-rows: repeat(2,48px);
+ 
+}
+  ul.footerMenuList{
+    display: flex;
+    gap: 50px;
+  }
+
+  .i1,.i2,.i3{
+    position: relative;
+    padding: 0 !important;
+  }
+  li.i4{
+    display: contents;
+    padding: 0 !important;
+  }
+  li.i1::after,li.i2::after,li.i3::after{
+    content: "";
+    width: 2px;
+    height: 20px;
+   
+    right: -25px;
+top: 0;
+      }
+      .footerMenu a{
+
+        font-size: 17px;
+       
+      }
+}
+@media screen and (max-width:1023px){
+  
+  .item1{
+    width: 47%;
+    }
+    .item2{
+    width: 47%;
+    }
+    .item3{
+    width: 20%;
+    order: 4;
+    }
+    .item4{
+    width: 75%;
+    }
+  .H1_item{
+-webkit-column-count: 2; /* Safari and Chrome */
+ -moz-column-count: 2; /* Firefox */
+ column-count: 2; /* CSS3 */
+  }
+  .H2_item{
+   column-gap: 100px;
+  }
+  .H3_item{
+-webkit-column-count: 4; /* Safari and Chrome */
+ -moz-column-count: 4; /* Firefox */
+ column-count: 4; /* CSS3 */
+  }
+  .H4_item{
+    column-gap: 0px;
+-webkit-column-count: 3; /* Safari and Chrome */
+ -moz-column-count: 3; /* Firefox */
+ column-count: 3; /* CSS3 */
+  }
+  div .topFooterGridLayout {
+    gap: 25px;
+   }
+
+  .i1::after,.i2::after,.i3::after{
+    left: 0;
+  }
+  
+}
+@media screen and (max-width: 780px){
+  .topFooter{
+    display: none;
+  }
+}
+@media screen and (max-width: 768px){
+  .mM{
+    display: none;
+  }
+  .weatherBlock{
+    display: none;
+  }
+  .raiBlock{
+    display: none;
+  }
+  .searchBlock{
+    flex-grow: 0 !important;
+  }
+  .bottomMenu_block-First{
+    display: none !important;
+  }
+  .bottomMenu_block-Second{
+    display: flex !important;
+    justify-content: space-between;
+    padding: 10px 0px;
+    align-items: center;
+  }
+
+  
+  .socLink{
+    width: 30px;
+  }
+  .topMenu{
+    display: none;
+  }
+  #SearchInfoSite:placeholder-shown{
+    font-size:30px !important;	
+   }
+   .SearchonSite{
+    width: 80% !important;
+  }
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+margin: 0;
+padding: 0;
+color: #212335;
+
+}
+ul{
+  padding: 0;
+}
+ul li{
+  list-style-type: none ;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+button{
+  border: none;
+  background-color: inherit;
+}
+.container{
+  max-width: 1276px; margin: 0 auto; padding: 0 10px;
+}
+.header{
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #FFF;
+  top: 0;
+  z-index: 15;
+  box-shadow: 0px 15px 70px -6px grey;
+  transform: translateY(0px);
+  transition: transform 0.3s ease;
+}
+.main{
+  margin: 156px 0px 0px 0px;
+}
+
+.shildMonitor{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 16;
+  background-color: rgba(0, 0, 0, .5);/* cтвори змінну де в js будеш маніпулювати нею */
+   display: none;
+}
+.monitor{
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  display: none;
+}
+.btnClose.monitor button::after,.btnClose.monitor button::before{
+  background-color: #3d5eff;
+}
+header{
+  white-space: nowrap;
+}
+/* =============================================================header=========================================== */
+
+.topMenu{
+  background-color: #475358;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  transform: translateY(-300%);
+  transition: transform 0.3s 0.1s  ease;
+}
+.infoPanel{
+  background-color: #009;
+  color: #fff;
+}
+.topMenu_list ul{
+  display:flex;
+  align-items: center;
+  gap: 32px;
+  color: #FFF;
+}
+.topMenu_list ul:first-child svg{
+  width: 80px;
+  height: 80px;
+}
+.infoPanel{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  padding: 2px 0px;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Components in Header!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.btn{
+  cursor: pointer;
+}
+.burgerMenu.btnClose span{
+ 
+  background-color: inherit;
+}
+
+.burgerMenu.btnClose button::after{
+  bottom: 0px;
+  transform: rotate(45deg);
+}
+.burgerMenu.btnClose button::before{
+  top: 0px;
+  transform: rotate(-45deg);
+}
+.burgerMenu span{
+  display: block;
+  width:25px;
+  height: 2px;
+  background-color: #475358;
+}
+.burgerMenu button{
+  position: relative;
+  transform: translateY(-5px);
+}
+.burgerMenu button::after,.burgerMenu button::before{
+  content: " ";
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  background-color: #475358;
+  left: 0;
+}
+.burgerMenu button::after{
+  bottom: -10px;
+}
+.burgerMenu button::before{
+  top: -10px;
+}
+.dotsMenu span{
+  display: block;
+  width:5px;
+  height: 5px;
+  background-color: #475358;
+  border-radius: 50%;
+}
+.dotsMenu{
+  position: relative;
+}
+.dotsMenu::after,.dotsMenu::before{
+  content: " ";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background-color: #475358;
+  border-radius: 50%;
+  top: 0;
+}
+.dotsMenu::after{
+  right: -10px;
+}
+.dotsMenu::before{
+  left: -10px;
+}
+
+.mobileMenuTextCol::-webkit-scrollbar{
+  display: none;
+ }
+.mobileMenu{
+ 
+  width: 250px;
+  position: fixed !important; 
+  top: 0;
+  height: 100%;
+  z-index: 19;
+  transform: translateX(-100%);
+ visibility: hidden;
+  transition: transform 0.3s ease-in;
+  /* overflow-y: scroll; */
+}
+.mobileMenuTextCol{
+  overflow-y: scroll;
+}
+.socialLink-mobile{
+  position: fixed;
+  bottom: -10px;
+  left: 0;
+  background-color: #fefefe;
+  
+    }
+    .socialLink-mobile ul{
+  display: flex;
+  justify-content: space-around;
+  width: 250px;
+  margin: 10px 0;
+    }
+.Sub{
+  background-color: rgb(170, 168, 168);
+  
+}
+div.mobileSubFirstMenu{
+  position: absolute ; top: 0;bottom: 0; z-index: -1;
+width: 250px;
+transform: translateX(-100%);
+transition: transform 0.5s ease-in;
+}
+div.mobileSubSecondMenu{
+  position: absolute;bottom: 0; top: 0; z-index: -1;
+  width: 250px;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
+}
+div.mobileSubTerdMenu{
+  position: absolute;bottom: 0; top: 0; z-index: -1;
+  width: 250px;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
+}
+.subList {
+  margin-top: 100px;
+}
+.subList li{
+  
+  padding: 10px 30px;
+}
+.mobileMenu_block{
+  background-color:#fefefe;
+  font-size: 16px;
+  font-weight: 400;
+ height: 100%;
+  padding: 30px 30px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.Title{
+  display: inline-flex;
+  gap: 15px;
+}
+.Text{
+  
+}
+.mobileSideMenu_List{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 25px;
+ 
+}
+/* .socialLink-mobile{
+display: none;
+} */
+/* ==================================== event on JS ======================================== */
+.mobileMenu.onActive,.shildMonitor.onActive,.SearchonSite.onActive,.topMenu.onActive,div.monitor.onActive,.infoText.onActive,.infoText.weatherCity.onActive{
+  display: block;
+}
+
+.mobileMenu.onActive{
+  transform:translateX(0%);
+  visibility: visible;
+}
+.Sub.onActive{
+  transform:translateX(88%);
+  visibility: visible;
+}
+
+.topMenu.onActive{
+  transform: translateY(-190%);
+ 
+}
+/* .header.onActive{
+  transform: translateY(80px);
+  
+} */
+/* ----------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------- */
+.mainMenu{
+  margin: 25px 0;
+  position: relative;
+}
+.mainMenu_block {
+  font-size: 16px;
+  font-weight: 600;
+ display: flex;
+ justify-content: space-between;
+ gap: 25px;
+ align-items: center;
+}
+.menu{
+  display: flex;
+  gap: 70px;
+}
+.menu .M{
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+
+.vLine::before{
+content: " ";
+width: 2px;
+height: 24px;
+background-color: #475358;
+position: absolute;
+top: -2px;
+left: -25px;
+}
+
+.infoTgr button{
+  font-size: 16px;
+  font-weight: 600;
+
+}
+
+.infoText{
+  width: 680px;
+  height: 409px;
+  background-color: #FFF;
+  padding: 20px 55px 0 40px;
+  border: 1px solid grey;
+  position: absolute;
+  right: 0;
+  margin-top: 18px;
+  z-index: 15;
+  display: none;
+}
+.infoText::before{
+  content: "";
+  width: 26px;
+  height: 26px;
+
+  position: absolute;
+  top: -14px;
+  transform: rotate(45deg);
+  left: 138px;
+  background-color: #fff;
+  border-top:1px solid grey ;
+  border-left:1px solid grey ;
+}
+.infoText_subList {
+  column-count: 3;
+  padding-top:10px ;
+  font-size: 16px;
+  font-weight: 600;
+  column-gap: 0;
+}
+.infoText_subList li{
+  padding: 8px 0;
+}
+.searchBlock{
+  flex-grow: 1; text-align: center;
+}
+.SearchonSite{
+  position: fixed;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44%;
+  background-color: transparent;
+  display: none;
+  z-index: 20;
+}
+
+#SearchInfoSite:placeholder-shown{
+  font-size:45px;	
+  border: none;
+ }
+#SearchInfoSite{
+  font-size:45px;	
+  border: none;
+  width: 90%;
+  background-color: transparent;
+  font-family: Merriweather, serif;
+  font-weight: 900;
+ }
+ .weatherBlock{
+  flex-grow: 0;
+ }
+.weather{
+  font-size: 14px;
+  font-weight: 400;
+}
+.weatherIcon{
+  display: flex;
+}
+
+
+
+.infoText.weatherCity{
+  width: 240px;
+  height:80px;
+  padding: 16px;
+  border-radius: 2px;
+  display: none;
+}
+.inputBlock{
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+}
+.weatherCity::before{
+  left: 120px;
+  top: -10px;
+  width: 18px;
+  height: 18px;
+}
+#weatherCitySearch{
+  border: none;
+}
+input:focus{
+  outline: none;
+}
+.intSearch{
+  transform: translateY(10px);
+}
+
+
+
+.btnLogoMenu {
+ width: 48px;
+ 
+}
+.btnLogoMenu svg{
+  fill: #212335;
+}
+
+
+.bottomMenu{
+  border-top: 1px solid #cdcdd6;
+}
+  .bottomMenu_block{
+   
+  }
+  .bottomMenu_block-First{
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-end;
+    gap: 90px;
+    padding: 15px 0px;
+  }
+  .bottomMenu_block-Second{
+    display: none;
+  }
+  .bottomMenu_list{
+    display: flex;
+    gap:20px;
+  }
+  .fstLi span{
+    
+    color:#009;
+    width: 15px;
+  }
+  .socialLink ul{
+    display: flex ;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .socLink{
+    width: 20px;
+  }
+/* --------------------------------------------------------------------------------------------------------------- */
+
+
+footer{
+  color: #fff;
+}
+footer h3{
+  font-size: 18px;
+}
+footer img{
+  width: 20px;
+}
+footer a{
+  color: rgb(205, 205, 214);
+  text-decoration: none;
+  font-size: 16px;
+}
+footer ul li{
+  padding-bottom: 8px;
+}
+
+
+
+.topFooterGridLayout{
+    display: flex;
+    flex-flow: row wrap;
+     text-wrap: nowrap;
+     gap: 30px;
+    }
+    .H2_item{
+  -webkit-column-count: 2; /* Safari and Chrome */
+   -moz-column-count: 2; /* Firefox */
+   column-count: 2; /* CSS3 */
+    }
+
+
+
+
+    .bottomFooterGrid{
+      padding: 60px 0px;
+    }
+    .bottomFooterGrid{
+      display: grid;
+    /*   grid-template-columns: auto 1fr;
+      grid-template-rows: repeat(2,48px); */
+      gap: 48px 40px;
+    }
+    
+    .bottomFooter .logoImg p{
+      color: rgb(37, 42, 63);
+      font-size: 26px;
+      font-weight: 800;
+      margin: 0;
+      transform: translateY(5px);
+    }
+    .logoImg{
+      width: 50px;
+      height: 50px;
+    }
+    .logoImg svg{
+     fill: #fff;
+    }
+     
+      .cookis_settings{
+       position: relative;
+       margin-left: 20px;
+      }
+      .btnB{
+        border: 1px solid rgb(205,205,214);
+        padding: 8px 12px;
+        background-color: transparent;
+        transform: translateY(-6px);
+        
+        display: flex;
+
+      }
+      .btnCookis{
+        background-color: transparent;
+        border: none;
+        color: #fff;
+      }
+      .btnCookis1{
+        margin-left: 25px;
+      }
+      .btnCookis1::before{
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: #0AE16D;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 6px;
+        left: 4px;
+      }
+    
+      .footer-details{
+        
+        color: rgb(205, 205, 214);
+        font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+  
+    transition: 250ms ease-in;
+    max-width: 664px;
+    text-align: left;
+   
+      }
+        
+        .footerMenuList{
+         display: block;
+        }
+        .i1::after,.i2::after,.i3::after{
+          
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: rgb(205, 205, 214);
+          position: absolute;
+          bottom: 0 !important;
+        }
+
+        .footerMenu a{
+          color: #fff;
+          font-size: 17px;
+          font-weight: 700;
+        }
+        
+        .footerMenu.footerMenuList li.i1,.footerMenu.footerMenuList li.i2,.footerMenu.footerMenuList li.i3{
+          position: relative;
+       
+        }
+        .footerMenu.footerMenuList li.i4{
+          display: inline-flex;
+       
+        
+        }
+        .i1,.i2,.i3{
+          position: relative;
+          padding: 24px 0;
+        }
+        .i4{
+          display: inline-flex;
+          padding: 32px 0;
+        
+        }
