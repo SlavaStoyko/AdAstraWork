@@ -87,23 +87,44 @@ menuOpenbtn.addEventListener("click",(e)=>{
         document.querySelector('.mobileMenu').classList.add("onActive");
         document.querySelector('.socialLink-mobile').classList.add('onActive');
       if(document.querySelector('.mobileMenu').classList.contains("onActive")){
-        
+        if(window.innerWidth > 768){
             document.querySelector('.mobileSideMenu_List').children[2].onclick = () =>{
-                btnOpenSubMenu[0].classList.add("onActive");
-                btnOpenSubMenu[1].classList.remove("onActive");
-                btnOpenSubMenu[2].classList.remove("onActive");
+                btnOpenSubMenu[0].classList.add("onActivePC");
+                btnOpenSubMenu[1].classList.remove("onActivePC");
+                btnOpenSubMenu[2].classList.remove("onActivePC");
             }
             document.querySelector('.mobileSideMenu_List').children[4].onclick = () =>{
-                btnOpenSubMenu[1].classList.add("onActive");
-                btnOpenSubMenu[0].classList.remove("onActive");
-                btnOpenSubMenu[2].classList.remove("onActive");
+                btnOpenSubMenu[1].classList.add("onActivePC");
+                btnOpenSubMenu[0].classList.remove("onActivePC");
+                btnOpenSubMenu[2].classList.remove("onActivePC");
             }
             document.querySelector('.mobileSideMenu_List').children[5].onclick = () =>{
-                btnOpenSubMenu[2].classList.add("onActive");
-                btnOpenSubMenu[0].classList.remove("onActive");
-                btnOpenSubMenu[1].classList.remove("onActive");
+                btnOpenSubMenu[2].classList.add("onActivePC");
+                btnOpenSubMenu[0].classList.remove("onActivePC");
+                btnOpenSubMenu[1].classList.remove("onActivePC");
             }
+        
+
+
+      }else{
+        document.querySelector('.mobileSideMenu_List').children[2].onclick = () =>{
+            btnOpenSubMenu[0].classList.add("onActiveMob");
+            btnOpenSubMenu[1].classList.remove("onActiveMob");
+            btnOpenSubMenu[2].classList.remove("onActiveMob");
+        }
+        document.querySelector('.mobileSideMenu_List').children[4].onclick = () =>{
+            btnOpenSubMenu[1].classList.add("onActiveMob");
+            btnOpenSubMenu[0].classList.remove("onActiveMob");
+            btnOpenSubMenu[2].classList.remove("onActiveMob");
+        }
+        document.querySelector('.mobileSideMenu_List').children[5].onclick = () =>{
+            btnOpenSubMenu[2].classList.add("onActiveMob");
+            btnOpenSubMenu[0].classList.remove("onActiveMob");
+            btnOpenSubMenu[1].classList.remove("onActiveMob");
+        }
+    
       }
+    }
         bodyClosebtn[0].classList.add("onActive");
         checkScroll();
     }
@@ -111,7 +132,7 @@ menuOpenbtn.addEventListener("click",(e)=>{
         document.querySelector('.SearchonSite').classList.add("onActive");
         document.querySelector('.monitor').classList.add("onActive");
        
-        bodyClosebtn[0].style.backgroundColor = "#ffffff9e";
+        bodyClosebtn[0].style.backgroundColor = "rgba(255, 255, 255, 0.95)";
         bodyClosebtn[0].classList.add("onActive");
         checkScroll();
     }
@@ -132,24 +153,27 @@ menuOpenbtn.addEventListener("click",(e)=>{
         document.querySelector('.socialLink-mobile').classList.add('onActive');
       if(document.querySelector('.mobileMenu').classList.contains("onActive")){
         bodyClosebtn[0].classList.add("onActive");
-        btnOpenSubMenu[0].classList.add("onActive");
-                btnOpenSubMenu[1].classList.remove("onActive");
-                btnOpenSubMenu[2].classList.remove("onActive");
+        btnOpenSubMenu[0].style.cssText="translateX(88px); visibility: visible; ";
+                /* btnOpenSubMenu[1].classList.remove("onActive");
+                btnOpenSubMenu[2].classList.remove("onActive"); */
         
-            document.querySelector('.mobileSideMenu_List').children[2].addEventListener("mouseover",() =>{
-                btnOpenSubMenu[0].classList.add("onActive");
-                btnOpenSubMenu[1].classList.remove("onActive");
-                btnOpenSubMenu[2].classList.remove("onActive");
+            document.querySelector('.mobileSideMenu_List').children[2].addEventListener("click",() =>{
+                btnOpenSubMenu[0].style.cssText="translateX(88px); visibility: visible; ";
+                /* btnOpenSubMenu[1].classList.remove("onActive");
+                btnOpenSubMenu[2].classList.remove("onActive"); */
             })
-            document.querySelector('.mobileSideMenu_List').children[4].addEventListener("mouseover",() =>{
-                btnOpenSubMenu[0].classList.remove("onActive");
-                btnOpenSubMenu[2].classList.remove("onActive");
+            document.querySelector('.mobileSideMenu_List').children[4].addEventListener("click",() =>{
+                /* btnOpenSubMenu[0].classList.remove("onActive");
+                btnOpenSubMenu[2].classList.remove("onActive"); */
             })
-            document.querySelector('.mobileSideMenu_List').children[5].addEventListener("mouseover",() =>{
-                btnOpenSubMenu[2].classList.add("onActive");
-                btnOpenSubMenu[0].classList.remove("onActive");
-                btnOpenSubMenu[1].classList.remove("onActive");
+            document.querySelector('.mobileSideMenu_List').children[5].addEventListener("click",() =>{
+                btnOpenSubMenu[2].style.cssText="translateX(88px); visibility: visible; ";
+                /* btnOpenSubMenu[0].classList.remove("onActive");
+                btnOpenSubMenu[1].classList.remove("onActive"); */
             })
+            
+             
+            
             checkScroll();
       }
     
@@ -180,4 +204,20 @@ if(bodyClosebtn[0].classList.contains("onActive")){
     document.body.style.paddingRight = "0px";
 
 }
+}
+document.querySelectorAll('.btnToMainMenu')[0].addEventListener("click",() =>{
+    backClass(0,"onActiveMob")
+})
+document.querySelectorAll('.btnToMainMenu')[1].addEventListener("click",() =>{
+    backClass(1,"onActiveMob")
+    
+})
+document.querySelectorAll('.btnToMainMenu')[2].addEventListener("click",() =>{
+    
+    backClass(2,"onActiveMob")
+})
+console.log(document.querySelectorAll('.btnToMainMenu'),btnOpenSubMenu);
+
+function backClass(ind,params) {
+    btnOpenSubMenu[ind].classList.remove(params);
 }
