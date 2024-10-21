@@ -170,9 +170,18 @@ top: 0;
     display: none;
   }
 }
+
+
+
 @media screen and (max-width: 768px){
   .mM{
     display: none;
+  }
+  .mainMenu{
+    margin: 5px !important;
+  }
+  .logoSiteMenu{
+    height: 30px !important;
   }
   .weatherBlock{
     display: none;
@@ -192,8 +201,6 @@ top: 0;
     padding: 10px 0px;
     align-items: center;
   }
-
-  
   .socLink{
     width: 30px;
   }
@@ -206,7 +213,39 @@ top: 0;
    .SearchonSite{
     width: 80% !important;
   }
+  .mobileMenu{
+    width: 300px !important;
+  }
+  .burger_btn_dropeDown span::before{
+      transform: translate(222px, -20px) !important;
+  
+  }
+  div.mobileSubFirstMenu{
+  z-index: 1 !important;
+  width: 300px !important;
+  }
+  div.mobileSubSecondMenu{
+   
+    z-index: 1 !important;
+    width: 300px !important;
+  }
+  div.mobileSubTerdMenu{
+    z-index: 1 !important;
+    width: 300px !important;
+  }
+  .btnToMainMenu{
+    display: block !important;
+  }
+  .Sub.onActiveMob{
+    transform: translateX(25px) !important;
+    visibility: visible !important;
+  }
 }
+
+
+
+
+
 *{
   margin: 0;
   padding: 0;
@@ -425,29 +464,36 @@ div.mobileSubFirstMenu{
   position: absolute ; top: 0;bottom: 0; z-index: -1;
 width: 250px;
 transform: translateX(-100%);
-transition: transform 0.5s ease-in;
+transition: transform visibility 0.5s ease-in;
+visibility: hidden;
+
 }
 div.mobileSubSecondMenu{
   position: absolute;bottom: 0; top: 0; z-index: -1;
   width: 250px;
   transform: translateX(-100%);
   transition: transform 0.5s ease-in;
+  visibility: hidden;
 }
 div.mobileSubTerdMenu{
   position: absolute;bottom: 0; top: 0; z-index: -1;
   width: 250px;
   transform: translateX(-100%);
   transition: transform 0.5s ease-in;
+  visibility: hidden;
+}
+.btnToMainMenu{
+  display: none;
 }
 .burger_btn_dropeDown span::before{
   display: block;
-  content: " ";
-  background-image: url("../images/arrowF.svg");
- width: 15px;
- height: 15px;
-  position: absolute;
-  right: 30px;
-    transform: translateY(-15px);
+    content: " ";
+    background-image: url(../images/arrowF.svg);
+    width: 15px;
+    height: 15px;
+    right: 30px;
+    transform: translate(174px, -20px);
+
 }
 .subList {
   margin-top: 100px;
@@ -488,9 +534,9 @@ div.mobileSubTerdMenu{
   transform:translateX(0%);
   visibility: visible;
 }
-.Sub.onActive{
+.Sub.onActivePC{
   transform:translateX(88%);
-  visibility: visible;
+  visibility: visible; 
 }
 
 .topMenu.onActive{
@@ -520,7 +566,9 @@ div.mobileSubTerdMenu{
   gap: 25px;
   justify-content: space-between;
 }
-
+.logoSiteMenu{
+  height: 48px;
+}
 
 .vLine::before{
 content: " ";
