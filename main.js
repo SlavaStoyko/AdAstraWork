@@ -66,11 +66,9 @@ for (let i = 0; i < bodyClosebtn.length; i++) {
       
         if(onActive.length > 0){
             onActive.forEach(element => {
-                element.classList.remove("onActive"); /* закриваю усі вікна які відкниті */
+                element.classList.remove("onActive");
             });
-        }/*else{
-            в функції return
-        } */
+        }
            
             
             document.querySelector(".header").style.transform = "translateY(0px)";  
