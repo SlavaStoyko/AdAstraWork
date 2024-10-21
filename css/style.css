@@ -236,8 +236,10 @@ top: 0;
   .btnToMainMenu{
     display: block !important;
   }
-  .Sub.onActiveMob{
-    transform: translateX(25px) !important;
+  .Sub.onActive{
+    transform: translateX(-30px) !important;
+    transition: transform 0.5s ease-in;
+    transition: visibility 1s  ease-in;
     visibility: visible !important;
   }
 }
@@ -463,23 +465,24 @@ header{
 div.mobileSubFirstMenu{
   position: absolute ; top: 0;bottom: 0; z-index: -1;
 width: 250px;
-transform: translateX(-100%);
-transition: transform visibility 0.5s ease-in;
+transform: translateX(-200%);
+transition: transform 0.5s ease-in;
+
 visibility: hidden;
 
 }
 div.mobileSubSecondMenu{
   position: absolute;bottom: 0; top: 0; z-index: -1;
   width: 250px;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in;
+  transform: translateX(-200%);
+  transition: transform,visibility 0.5s ease-in;
   visibility: hidden;
 }
 div.mobileSubTerdMenu{
   position: absolute;bottom: 0; top: 0; z-index: -1;
   width: 250px;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in;
+  transform: translateX(-200%);
+  transition: transform,visibility 0.5s ease-in;
   visibility: hidden;
 }
 .btnToMainMenu{
@@ -534,8 +537,10 @@ div.mobileSubTerdMenu{
   transform:translateX(0%);
   visibility: visible;
 }
-.Sub.onActivePC{
+.Sub.onActive{
   transform:translateX(88%);
+  transition: transform 0.5s ease-in;
+    transition: visibility 1s  ease-in;
   visibility: visible; 
 }
 

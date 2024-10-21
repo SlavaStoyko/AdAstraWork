@@ -89,17 +89,17 @@ menuOpenbtn.addEventListener("click",(e)=>{
       if(document.querySelector('.mobileMenu').classList.contains("onActive")){
         
             document.querySelector('.mobileSideMenu_List').children[2].onclick = () =>{
-                btnOpenSubMenu[0].classList.add("onActive");
+                btnOpenSubMenu[0].classList.toggle("onActive");
                 btnOpenSubMenu[1].classList.remove("onActive");
                 btnOpenSubMenu[2].classList.remove("onActive");
             }
             document.querySelector('.mobileSideMenu_List').children[4].onclick = () =>{
-                btnOpenSubMenu[1].classList.add("onActive");
+                btnOpenSubMenu[1].classList.toggle("onActive");
                 btnOpenSubMenu[0].classList.remove("onActive");
                 btnOpenSubMenu[2].classList.remove("onActive");
             }
             document.querySelector('.mobileSideMenu_List').children[5].onclick = () =>{
-                btnOpenSubMenu[2].classList.add("onActive");
+                btnOpenSubMenu[2].classList.toggle("onActive");
                 btnOpenSubMenu[0].classList.remove("onActive");
                 btnOpenSubMenu[1].classList.remove("onActive");
             }
