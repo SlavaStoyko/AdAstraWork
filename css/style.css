@@ -435,10 +435,11 @@ header{
 }
 .mobileMenuTextCol{
   overflow-y: scroll;
+  padding-bottom: 70px;
 }
 .socialLink-mobile{
   position: fixed;
-  bottom: -10px;
+  bottom: 25px;
   left: 0;
   background-color: #fefefe;
   
@@ -467,7 +468,7 @@ div.mobileSubSecondMenu{
   width: 250px;
   transform: translateX(-200%);
   transition: transform,visibility 0.5s ease-in;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 div.mobileSubTerdMenu{
   position: absolute;bottom: 0; top: 0; z-index: -1;
