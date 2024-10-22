@@ -121,6 +121,7 @@ top: 0;
         font-size: 17px;
        
       }
+
 }
 @media screen and (max-width:1023px){
   
@@ -576,7 +577,10 @@ position: absolute;
 top: -2px;
 left: -25px;
 }
-
+.listSubMobileMenu{
+  overflow-y: scroll; height: 100vh; padding-bottom: 250px;  
+}
+.listSubMobileMenu::-webkit-scrollbar{display: none;}
 .infoTgr button{
   font-size: 16px;
   font-weight: 600;
